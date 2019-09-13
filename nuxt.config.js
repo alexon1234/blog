@@ -1,4 +1,7 @@
-import postsEn from '@/content/en/postsEn'
+const path = require('path')
+
+const { i18n } = require('./locales/i18n-nuxt-config')
+import postsEn from './content/en/postsEn'
 
 export default {
   mode: 'universal',
@@ -40,7 +43,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: [],
+  modules: [['nuxt-i18n', i18n]],
   /*
    ** Build configuration
    */

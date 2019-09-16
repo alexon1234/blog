@@ -1,8 +1,8 @@
 const path = require('path')
 
-const { i18n } = require('./locales/i18n-nuxt-config')
-import postsEn from './content/en/postsEn'
-import postsEs from './content/es/postsEs'
+import i18n from './locales/i18n-nuxt-config'
+import postsEn from './contents/en/postsEn'
+import postsEs from './contents/es/postsEs'
 
 export default {
   head: {
@@ -38,7 +38,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: [['nuxt-i18n', i18n]],
+  modules: ['@nuxtjs/style-resources', ['nuxt-i18n', i18n]],
   /*
    ** Build configuration
    */
@@ -47,14 +47,20 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {
+      if (ctx.isDev) {
+        config.devtool = ctx.isClient ? 'source-map' : 'inline-source-map'
+      }
+
       config.module.rules.push({
         test: /\.md$/,
-        include: path.resolve(__dirname, 'content'),
+        include: path.resolve(__dirname, 'contents'),
         loader: 'frontmatter-markdown-loader'
       })
     }
+  },
+  generate: {
+    routes: ['/es', '404']
+      .concat(postsEn.map(p => `/posts/${p}`))
+      .concat(postsEs.map(p => `es/posts/${p}`))
   }
-  // generate: {
-  //   routes: ['/es', '404'].concat(postsEn.map(p => `/post/${p}`))
-  // }
 }

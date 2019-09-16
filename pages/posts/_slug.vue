@@ -3,21 +3,18 @@
     <div class="post-title">
       <h1></h1>
     </div>
-    <div class="content" v-html="post.html"></div>
+    <div class="content">{{title}}</div>
   </div>
 </template>
 <script>
 export default {
-  async asyncData({ params }) {
-    try {
-      let post = await import(`~/content/${params.slug}.md`)
-      console.debug(post)
-      return {
-        post
-      }
-    } catch (err) {
-      console.debug(err)
-      return false
+  async asyncData({ params, app }) {
+    const post = await import(
+      `~/contents/${app.i18n.locale}/posts/${params.slug}.md`
+    )
+    const attr = post.attributes
+    return {
+      title: attr.title
     }
   }
 }

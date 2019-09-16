@@ -12,6 +12,7 @@
     "analyze": "nuxt build --analyze"
   },
   "dependencies": {
+    "@nuxtjs/style-resources": "^1.0.0",
     "nuxt": "^2.0.0",
     "nuxt-i18n": "^6.2.1"
   },

@@ -2,12 +2,9 @@ const path = require('path')
 
 const { i18n } = require('./locales/i18n-nuxt-config')
 import postsEn from './content/en/postsEn'
+import postsEs from './content/es/postsEs'
 
 export default {
-  mode: 'universal',
-  /*
-   ** Headers of the page
-   */
   head: {
     title: process.env.npm_package_name || '',
     meta: [
@@ -21,10 +18,8 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
-  /*
-   ** Customize the progress-bar color
-   */
-  loading: { color: '#fff' },
+
+  loading: { color: '#5a46ff', height: '3px' },
   /*
    ** Global CSS
    */
@@ -58,8 +53,8 @@ export default {
         loader: 'frontmatter-markdown-loader'
       })
     }
-  },
-  generate: {
-    routes: [].concat(postsEn.map(p => `posts/${p}`))
   }
+  // generate: {
+  //   routes: ['/es', '404'].concat(postsEn.map(p => `/post/${p}`))
+  // }
 }

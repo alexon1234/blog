@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <nuxt />
+    <nuxt class="content" />
     <Footer class="footer" />
   </div>
 </template>
@@ -20,8 +20,8 @@ export default {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  .footer {
-    margin-top: auto;
+  & .content {
+    flex: 1;
   }
 }
 </style>

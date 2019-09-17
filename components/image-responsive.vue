@@ -10,8 +10,6 @@
         :data-src="require(`~/assets/images/${name}/_thumbnail.jpg`)"
         class="lazyload"
         alt="Alternate text for the image"
-        width="300"
-        height="300"
       />
     </figure>
   </div>
@@ -28,4 +26,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+img {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+}
+
+figure {
+  margin: 0;
+}
 </style>

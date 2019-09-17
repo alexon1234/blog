@@ -19,7 +19,6 @@
   },
   "devDependencies": {
     "@bazzite/nuxt-optimized-images": "^0.2.1",
-    "@nuxtjs/tailwindcss": "^1.0.0",
     "eslint-config-prettier": "^4.1.0",
     "eslint-plugin-prettier": "^3.0.1",
     "frontmatter-markdown-loader": "^2.1.0",

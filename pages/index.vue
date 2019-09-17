@@ -2,7 +2,7 @@
   <div class="main">
     <div class="main_header">
       <h1>{{$t('posts') }}</h1>
-      <LangSwitcher class="lang-switcher" />
+      <LangSwitcher />
     </div>
     <div class="grid">
       <div v-for="post in posts" :key="post.attributes.title" class="grid-item">
@@ -41,24 +41,21 @@ export default {
 <style lang="scss" scoped>
 .main {
   display: flex;
-  align-self: center;
-
+  flex-direction: column;
+  align-items: center;
   & &_header {
     display: flex;
     flex-direction: row;
     align-items: center;
-
-    & .lang-switcher {
-      margin-left: auto;
-    }
+    justify-content: space-around;
+    width: 100%;
   }
 
   .grid {
+    min-width: 50%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-auto-flow: row;
-    max-width: 750px;
-    margin: auto;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1.5rem;
   }
 }
 </style>

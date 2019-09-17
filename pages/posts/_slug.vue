@@ -16,6 +16,8 @@ export default {
 
     return {
       title: attr.title,
+      date: attr.date,
+      description: attr.description,
       content: post.html
     }
   }
@@ -23,11 +25,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-/deep/ code {
-  background-color: rgba(27, 31, 35, 0.05);
-  border-radius: 3px;
-  font-size: 85%;
-  margin: 0;
-  padding: 0.2em 0.4em;
-}
 </style>

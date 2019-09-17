@@ -1,7 +1,7 @@
 ---
 name: initial
 title: This is the initial commit
-year: 16 September 2019
+date: 16 September 2019
 description: This is the initial commit
 ---
 

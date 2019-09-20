@@ -1,14 +1,16 @@
 <template>
   <div class="main">
-    <div class="main_header">
-      <h1>{{$t('posts') }}</h1>
-      <LangSwitcher />
-    </div>
-    <div class="grid">
-      <div v-for="post in posts" :key="post.attributes.title" class="grid-item">
-        <BlogSummary :post="post" />
+    <section>
+      <div class="main_header">
+        <h1>{{$t('posts') }}</h1>
+        <LangSwitcher />
       </div>
-    </div>
+      <div class="grid">
+        <div v-for="post in posts" :key="post.attributes.title" class="grid-item">
+          <BlogSummary :post="post" />
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 <script>

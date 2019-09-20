@@ -1,7 +1,7 @@
 <template>
-  <div class="main">
-    <nuxt class="content" />
-    <Footer class="footer" />
+  <div class="layout">
+    <nuxt class="nuxt-content" />
+    <Footer />
   </div>
 </template>
 
@@ -16,12 +16,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.main {
+.layout {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  & .content {
-    flex: 1;
+  & .nuxt-content {
+    flex-grow: 1;
   }
 }
 </style>

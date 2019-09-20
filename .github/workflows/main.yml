@@ -8,8 +8,7 @@ jobs:
     - uses: actions/checkout@v1
     - name: Build Website 
       uses: actions/setup-node@v1
-    - name: npm install, build, generate
+    - name: npm install, build
       run: |
         npm install
         npm run build
-        npm run generate

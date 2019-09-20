@@ -26,16 +26,15 @@ header {
 
 .main {
   grid-area: main;
-  flex-grow: 1;
+  margin: 10px;
 }
 
 footer {
   grid-area: footer;
 }
 .container {
-  min-height: 100vh;
-  margin: 10px;
   display: grid;
+  grid-template-rows: 0 auto 50px;
   grid-template-areas:
     'header header header header'
     '. main main .'

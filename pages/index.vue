@@ -1,15 +1,13 @@
 <template>
   <div class="main">
-    <section>
-      <div class="main_header">
-        <h1>{{$t('posts') }}</h1>
-        <LangSwitcher />
-      </div>
-      <div class="grid">
-        <div v-for="post in posts" :key="post.attributes.title" class="grid-item">
-          <BlogSummary :post="post" />
-        </div>
-      </div>
+    <section class="main_header">
+      <h1>{{$t('posts') }}</h1>
+      <LangSwitcher />
+    </section>
+    <section class="main_posts">
+      <ng-content v-for="post in posts" :key="post.attributes.title">
+        <BlogSummary :post="post" />
+      </ng-content>
     </section>
   </div>
 </template>
@@ -41,23 +39,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.main {
+.main_header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  & &_header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-  }
+  justify-content: space-between;
+}
 
-  .grid {
-    min-width: 50%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 1.5rem;
-  }
+.main_posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
 }
 </style>

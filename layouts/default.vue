@@ -1,13 +1,17 @@
 <template>
-  <div class="layout">
-    <nuxt class="nuxt-content" />
-    <Footer />
-  </div>
+  <section class="container">
+    <header>Header</header>
+    <nuxt class="main" />
+    <footer>
+      <Footer />
+    </footer>
+  </section>
 </template>
 
 
 <script>
 import Footer from './footer'
+
 export default {
   components: {
     Footer
@@ -16,12 +20,25 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.layout {
-  display: flex;
-  flex-direction: column;
+header {
+  grid-area: header;
+}
+
+.main {
+  grid-area: main;
+  flex-grow: 1;
+}
+
+footer {
+  grid-area: footer;
+}
+.container {
   min-height: 100vh;
-  & .nuxt-content {
-    flex-grow: 1;
-  }
+  margin: 10px;
+  display: grid;
+  grid-template-areas:
+    'header header header header'
+    '. main main .'
+    'footer footer footer footer';
 }
 </style>

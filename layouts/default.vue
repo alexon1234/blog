@@ -1,22 +1,14 @@
 <template>
   <section class="container">
-    <header>Header</header>
+    <header></header>
     <nuxt class="main" />
-    <footer>
-      <Footer />
-    </footer>
+    <footer></footer>
   </section>
 </template>
 
 
 <script>
-import Footer from './footer'
-
-export default {
-  components: {
-    Footer
-  }
-}
+export default {}
 </script>
 
 <style lang="scss" scoped>

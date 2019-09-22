@@ -26,7 +26,6 @@ footer {
 }
 .container {
   display: grid;
-  grid-template-rows: 0 auto 50px;
   grid-template-areas:
     'header header header header'
     '. main main .'

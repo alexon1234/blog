@@ -1,6 +1,6 @@
 <template>
   <article>
-    <ImageResponsive :name="post.attributes.name" />
+    <ImageResponsive class="thumbnail" :name="post.attributes.name" />
     <section>
       <h3>
         <nuxt-link
@@ -20,3 +20,23 @@ export default {
   props: ['post']
 }
 </script>
+
+<style lang="scss" scoped>
+.thumbnail {
+  grid-area: thumbnail;
+}
+
+section {
+  grid-area: introduction;
+}
+
+article {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    'thumbnail'
+    'thumbnail'
+    'introduction';
+}
+</style>

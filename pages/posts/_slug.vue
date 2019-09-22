@@ -60,6 +60,7 @@ header {
 
 article {
   display: grid;
+  grid-template-rows: 300px auto;
   grid-template-areas:
     'header image'
     'main main';

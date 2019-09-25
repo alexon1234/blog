@@ -37,14 +37,4 @@ export default {
   background-position: center center;
   background-color: #999;
 }
-
-// img {
-//   // width: 100%;
-//   max-height: 100%;
-//   max-width: 100%;
-// }
-
-// figure {
-//   margin: 0;
-// }
 </style>

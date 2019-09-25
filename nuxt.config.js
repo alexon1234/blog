@@ -35,11 +35,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: [
-    '@nuxtjs/style-resources',
-    '@bazzite/nuxt-optimized-images',
-    ['nuxt-i18n', i18n]
-  ],
+  modules: ['@nuxtjs/style-resources', ['nuxt-i18n', i18n]],
   /*
    ** Build configuration
    */
@@ -71,30 +67,5 @@ export default {
     routes: []
       .concat(postsEn.map(p => `/posts/${p}`))
       .concat(postsEs.map(p => `es/posts/${p}`))
-  },
-  optimizedImages: {
-    inlineImageLimit: -1,
-    imagesName: ({ isDev }) =>
-      isDev ? '[path][name][hash:optimized].[ext]' : 'img/[hash:7].[ext]',
-    responsiveImagesName: ({ isDev }) =>
-      isDev
-        ? '[path][name]--[width][hash:optimized].[ext]'
-        : 'img/[hash:7]-[width].[ext]',
-    handleImages: ['jpeg', 'png', 'svg', 'webp', 'gif'],
-    optimizeImages: true,
-    optimizeImagesInDev: false,
-    defaultImageLoader: 'img-loader',
-    mozjpeg: {
-      quality: 80
-    },
-    optipng: false,
-    pngquant: {
-      speed: 7,
-      quality: [0.65, 0.8]
-    },
-    webp: {
-      preset: 'default',
-      quality: 85
-    }
   }
 }

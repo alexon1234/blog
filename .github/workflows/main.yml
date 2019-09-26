@@ -1,6 +1,9 @@
 name: Main Workflow
 
-on: [pull_request]
+on: 
+  pull_request:
+    - master  
+    
 jobs:
   build:
     runs-on: ubuntu-latest

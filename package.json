@@ -15,7 +15,7 @@
     "@nuxtjs/style-resources": "^1.0.0",
     "lazysizes": "^5.1.1",
     "nuxt": "^2.0.0",
-    "nuxt-i18n": "^6.2.1"
+    "nuxt-i18n": "^6.3.0"
   },
   "devDependencies": {
     "@bazzite/nuxt-optimized-images": "^0.2.1",

@@ -23,20 +23,16 @@ export default {
 
 <style lang="scss" scoped>
 .thumbnail {
-  grid-area: thumbnail;
+  grid-row: span 2;
 }
 
 section {
-  grid-area: introduction;
+  grid-row: span 1;
 }
 
 article {
   display: grid;
   grid-auto-flow: column;
   grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas:
-    'thumbnail'
-    'thumbnail'
-    'introduction';
 }
 </style>

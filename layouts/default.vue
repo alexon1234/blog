@@ -13,22 +13,22 @@ export default {}
 
 <style lang="scss" scoped>
 header {
-  grid-area: header;
+  grid-row: 1;
+  grid-column: 1 / 5;
 }
 
 .main {
-  grid-area: main;
-  padding: 10px;
+  grid-row: 2;
+  grid-column: 2/4;
 }
 
 footer {
-  grid-area: footer;
+  grid-row: 3;
+  grid-column: 1/5;
 }
 .container {
   display: grid;
-  grid-template-areas:
-    'header header header header'
-    '. main main .'
-    'footer footer footer footer';
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 50px 1fr 50px;
 }
 </style>

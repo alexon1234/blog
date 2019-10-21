@@ -86,7 +86,7 @@ export default {
     optimizeImagesInDev: false,
     defaultImageLoader: 'img-loader',
     mozjpeg: {
-      quality: 50
+      quality: 30
     },
     optipng: false,
     pngquant: {

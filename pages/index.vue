@@ -1,13 +1,15 @@
 <template>
   <div class="main">
     <section class="main_header">
-      <h1>{{$t('posts') }}</h1>
+      <h1>{{ $t('posts') }}</h1>
       <LangSwitcher />
     </section>
     <section class="main_posts">
-      <ng-content v-for="post in posts" :key="post.attributes.title">
-        <BlogSummary :post="post" />
-      </ng-content>
+      <BlogSummary
+        v-for="post in posts"
+        :key="post.attributes.title"
+        :post="post"
+      />
     </section>
   </div>
 </template>

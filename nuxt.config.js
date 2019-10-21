@@ -27,7 +27,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/vue-lazysizes.client.js'],
+  plugins: ['~/plugins/vue-lazysizes.client.js', 'modernizr-plugin.js'],
   /*
    ** Nuxt.js dev-modules
    */
@@ -35,7 +35,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/style-resources', ['nuxt-i18n', i18n]],
+  modules: ['@nuxtjs/style-resources', ['nuxt-i18n', i18n], 'nuxt-purgecss'],
   /*
    ** Build configuration
    */
@@ -67,5 +67,8 @@ export default {
     routes: []
       .concat(postsEn.map(p => `/posts/${p}`))
       .concat(postsEs.map(p => `es/posts/${p}`))
+  },
+  purgeCSS: {
+    // your settings here
   }
 }

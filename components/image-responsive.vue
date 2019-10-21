@@ -1,18 +1,5 @@
 <template>
-  <div class="img" :style="{ 'background-image': `url(${imageUrl})`}">
-    <!-- <figure class="picture">
-      <source
-        :data-srcset="require(`~/assets/images/${name}/_thumbnail.jpg?webp`)"
-        type="image/webp"
-      />
-      <source :data-srcset="require(`~/assets/images/${name}/_thumbnail.jpg`)" type="image/jpg" />
-      <img
-        :data-src="require(`~/assets/images/${name}/_thumbnail.jpg`)"
-        class="lazyload"
-        alt="Alternate text for the image"
-      />
-    </figure>-->
-  </div>
+  <div class="img" :style="{ 'background-image': `url(${imageUrl})` }" />
 </template>
 
 <script>

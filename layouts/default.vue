@@ -19,7 +19,7 @@ header {
 
 .main {
   grid-row: 2;
-  grid-column: 2/4;
+  grid-column: 2/2;
 }
 
 footer {
@@ -28,7 +28,7 @@ footer {
 }
 .container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: calc(20% - 50px) 1fr calc(20% - 50px);
   grid-template-rows: 50px 1fr 50px;
 }
 </style>

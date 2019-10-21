@@ -18,7 +18,7 @@ header {
 
 .main {
   grid-area: main;
-  margin: 10px;
+  padding: 10px;
 }
 
 footer {

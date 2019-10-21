@@ -17,8 +17,8 @@
         <h1>{{ title }}</h1>
         <pre>{{ description }}</pre>
       </section>
+      <ImageResponsive class="thumbnail" :name="name" />
     </header>
-    <ImageResponsive class="thumbnail" :name="name" />
     <div class="content" v-html="content"></div>
   </article>
 </template>
@@ -53,25 +53,16 @@ export default {
 
 <style lang="scss" scoped>
 header {
-  grid-area: header;
-}
-
-.thumbnail {
-  grid-area: image;
-}
-
-.content {
-  grid-area: main;
-}
-
-article {
   display: grid;
-  grid-template-rows: 300px auto;
-  grid-template-areas:
-    'header image'
-    'main main';
-}
-svg {
-  cursor: pointer;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  .thumbnail {
+    height: auto;
+    min-height: 300px;
+  }
+
+  svg {
+    cursor: pointer;
+  }
 }
 </style>

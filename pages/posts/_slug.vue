@@ -56,11 +56,6 @@ header {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
-  .thumbnail {
-    height: auto;
-    min-height: 300px;
-  }
-
   svg {
     cursor: pointer;
   }

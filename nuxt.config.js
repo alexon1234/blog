@@ -38,7 +38,12 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/style-resources', ['nuxt-i18n', i18n], 'nuxt-purgecss'],
+  modules: [
+    '@nuxtjs/style-resources',
+    ['nuxt-i18n', i18n],
+    'nuxt-purgecss',
+    '@bazzite/nuxt-optimized-images'
+  ],
   /*
    ** Build configuration
    */
@@ -73,5 +78,23 @@ export default {
   },
   purgeCSS: {
     // your settings here
+  },
+  optimizedImages: {
+    inlineImageLimit: -1,
+    handleImages: ['jpeg', 'png', 'svg', 'webp', 'gif'],
+    optimizeImages: true,
+    optimizeImagesInDev: false,
+    defaultImageLoader: 'img-loader',
+    mozjpeg: {
+      quality: 85
+    },
+    optipng: false,
+    pngquant: {
+      speed: 7,
+      quality: [0.65, 0.8]
+    },
+    webp: {
+      quality: 85
+    }
   }
 }

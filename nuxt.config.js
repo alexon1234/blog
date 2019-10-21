@@ -27,7 +27,10 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/vue-lazysizes.client.js', 'modernizr-plugin.js'],
+  plugins: [
+    '~/plugins/vue-lazysizes.client.js',
+    '~/plugins/modernizr-plugin.js'
+  ],
   /*
    ** Nuxt.js dev-modules
    */

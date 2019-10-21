@@ -1,5 +1,18 @@
 <template>
-  <div class="img" :style="{ 'background-image': `url(${imageUrl})` }" />
+  <div>
+    <figure>
+      <source
+        :data-srcset="require(`~/assets/images/${name}/_thumbnail.jpg?webp`)"
+        type="image/webp"
+      />
+      <source :data-srcset="require(`~/assets/images/${name}/_thumbnail.jpg`)" type="image/jpg" />
+      <img
+        :data-src="require(`~/assets/images/${name}/_thumbnail.jpg`)"
+        class="lazyload"
+        alt="Alternate text for the image"
+      />
+    </figure>
+  </div>
 </template>
 
 <script>
@@ -18,10 +31,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.img {
-  position: relative;
-  background-size: cover;
-  background-position: center center;
-  background-color: #999;
+
+figure {
+  margin: 0px;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+  }
 }
+
+
 </style>

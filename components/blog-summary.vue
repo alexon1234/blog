@@ -10,8 +10,7 @@
               params: { slug: post.attributes.name }
             })
           "
-          >{{ post.attributes.title }}</nuxt-link
-        >
+        >{{ post.attributes.title }}</nuxt-link>
       </h3>
       <pre>{{ post.attributes.description }}</pre>
     </section>
@@ -28,21 +27,30 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.thumbnail {
-  grid-row: span 2;
-}
-
-section {
-  grid-row: span 1;
-}
+@import '@/assets/css/colors.scss';
 
 article {
   display: grid;
   grid-auto-flow: column;
   grid-template-rows: 1fr 1fr 1fr;
-  background-color: #e0e0e0;
+  background-color: $lightest-color;
   padding: 10px;
   border-radius: 2%;
-  border: 1px solid #bdbdbd;
+  border: 1px solid $dark-color;
+
+  .thumbnail {
+    grid-row: span 2;
+  }
+
+  section {
+    grid-row: span 1;
+
+    a {
+      color: $primary-color;
+    }
+    pre {
+      color: $primary-color;
+    }
+  }
 }
 </style>

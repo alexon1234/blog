@@ -5,15 +5,13 @@
         v-for="locale in selectedLocale"
         :key="locale.code"
         :label="locale.name"
-        >{{ locale.name }}</option
-      >
+      >{{ locale.name }}</option>
       <option
         v-for="locale in availableLocales"
         :key="locale.code"
         :label="locale.code"
         @click="changeLocale(locale.code)"
-        >{{ locale.name }}</option
-      >
+      >{{ locale.name }}</option>
     </select>
   </div>
 </template>
@@ -36,4 +34,10 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@import '@/assets/css/colors.scss';
+
+select {
+  color: $primary-color;
+}
+</style>

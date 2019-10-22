@@ -1,4 +1,5 @@
-@import './variables.scss';
+@import './colors.scss';
+@import './font.scss';
 
 * {
   box-sizing: border-box;
@@ -8,8 +9,8 @@ body,
 html {
   margin: 0;
   padding: 0;
-  background-color: $background-color;
   font-family: $font-family;
+  background-color: $light-color;
 }
 
 select {

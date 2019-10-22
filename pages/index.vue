@@ -1,15 +1,13 @@
 <template>
   <div class="main">
     <section class="main_header">
-      <h1>{{ $t('posts') }}</h1>
+      <h1>
+        <b>{{ $t('posts') }}</b>
+      </h1>
       <LangSwitcher />
     </section>
     <section class="main_posts">
-      <BlogSummary
-        v-for="post in posts"
-        :key="post.attributes.title"
-        :post="post"
-      />
+      <BlogSummary v-for="post in posts" :key="post.attributes.title" :post="post" />
     </section>
   </div>
 </template>
@@ -41,11 +39,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/css/colors.scss';
+
 .main_header {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+
+  h1 {
+    color: $primary-color;
+  }
 }
 
 .main_posts {

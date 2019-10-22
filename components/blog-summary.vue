@@ -40,5 +40,9 @@ article {
   display: grid;
   grid-auto-flow: column;
   grid-template-rows: 1fr 1fr 1fr;
+  background-color: #e0e0e0;
+  padding: 10px;
+  border-radius: 2%;
+  border: 1px solid #bdbdbd;
 }
 </style>

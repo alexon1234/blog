@@ -49,8 +49,7 @@ export default {
     '@nuxtjs/style-resources',
     ['nuxt-i18n', i18n],
     'nuxt-purgecss',
-    '@bazzite/nuxt-optimized-images',
-    'nuxt-webfontloader'
+    '@bazzite/nuxt-optimized-images'
   ],
   /*
    ** Build configuration

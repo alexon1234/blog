@@ -52,12 +52,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-header {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+article {
+  header {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
-  svg {
-    cursor: pointer;
+    svg {
+      cursor: pointer;
+    }
   }
 }
 </style>

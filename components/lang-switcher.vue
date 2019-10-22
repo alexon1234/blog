@@ -1,6 +1,6 @@
 <template>
   <div>
-    <select>
+    <select aria-label="Language Switcher">
       <option
         v-for="locale in selectedLocale"
         :key="locale.code"

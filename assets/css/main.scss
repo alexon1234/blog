@@ -1,14 +1,15 @@
 @import './variables.scss';
 
+* {
+  box-sizing: border-box;
+}
+
 body,
 html {
   margin: 0;
   padding: 0;
   background-color: $background-color;
   font-family: $font-family;
-}
-* {
-  box-sizing: border-box;
 }
 
 select {

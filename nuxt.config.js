@@ -19,6 +19,12 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
 
+  webfontloader: {
+    google: {
+      families: ['Montserrat:400'] //Loads Lato font with weights 400 and 700
+    }
+  },
+
   loading: { color: '#5a46ff', height: '3px' },
   /*
    ** Global CSS
@@ -42,7 +48,8 @@ export default {
     '@nuxtjs/style-resources',
     ['nuxt-i18n', i18n],
     'nuxt-purgecss',
-    '@bazzite/nuxt-optimized-images'
+    '@bazzite/nuxt-optimized-images',
+    'nuxt-webfontloader'
   ],
   /*
    ** Build configuration

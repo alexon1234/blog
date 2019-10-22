@@ -16,13 +16,14 @@ export default {
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
-  },
-
-  webfontloader: {
-    google: {
-      families: ['Montserrat:400'] //Loads Lato font with weights 400 and 700
-    }
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'preload',
+        as: 'style',
+        href: 'https://fonts.googleapis.com/css?family=Montserrat&display=swap'
+      }
+    ]
   },
 
   loading: { color: '#5a46ff', height: '3px' },

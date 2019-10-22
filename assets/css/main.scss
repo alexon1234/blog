@@ -1,11 +1,16 @@
-@import './colors.scss';
+@import './variables.scss';
 
 body,
 html {
   margin: 0;
   padding: 0;
   background-color: $background-color;
+  font-family: $font-family;
 }
 * {
   box-sizing: border-box;
+}
+
+select {
+  font-family: $font-family;
 }

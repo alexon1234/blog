@@ -2,12 +2,21 @@
   <div>
     <picture>
       <source
-        :data-srcset="require(`~/assets/images/${name}/_thumbnail.jpg?webp`)"
+        :data-srcset="
+          require(`~/assets/images/${name}/_thumbnail.jpg?webp&resize&sizes[]=300&sizes[]=600&sizes[]=1000`)
+        "
         type="image/webp"
       />
-      <source :data-srcset="require(`~/assets/images/${name}/_thumbnail.jpg`)" type="image/jpg" />
+      <source
+        :data-srcset="
+          require(`~/assets/images/${name}/_thumbnail.jpg?resize&sizes[]=300&sizes[]=600&sizes[]=1000`)
+        "
+        type="image/jpg"
+      />
       <img
-        :data-src="require(`~/assets/images/${name}/_thumbnail.jpg`)"
+        :data-src="
+          require(`~/assets/images/${name}/_thumbnail.jpg?resize&sizes[]=300&sizes[]=600&sizes[]=1000`)
+        "
         class="lazyload"
         alt="Alternate text for the image"
       />

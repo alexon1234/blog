@@ -10,7 +10,8 @@
               params: { slug: post.attributes.name }
             })
           "
-        >{{ post.attributes.title }}</nuxt-link>
+          >{{ post.attributes.title }}</nuxt-link
+        >
       </h3>
       <pre>{{ post.attributes.description }}</pre>
     </section>

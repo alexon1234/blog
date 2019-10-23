@@ -6,29 +6,27 @@
   </section>
 </template>
 
-
 <script>
 export default {}
 </script>
 
 <style lang="scss" scoped>
 header {
-  grid-row: 1;
-  grid-column: 1 / 5;
+  grid-area: header;
 }
 
 .main {
-  grid-row: 2;
-  grid-column: 2/2;
+  grid-area: main;
 }
 
 footer {
-  grid-row: 3;
-  grid-column: 1/5;
+  grid-area: footer;
 }
 .container {
   display: grid;
-  grid-template-columns: calc(20% - 50px) 1fr calc(20% - 50px);
-  grid-template-rows: 50px 1fr 50px;
+  grid-template-areas:
+    'header header header header'
+    '. main main .'
+    'footer footer footer footer';
 }
 </style>

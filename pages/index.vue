@@ -8,6 +8,7 @@
     </section>
     <section class="main_posts">
       <BlogSummary
+        class="post"
         v-for="post in posts"
         :key="post.attributes.title"
         :post="post"
@@ -60,7 +61,7 @@ export default {
   & &_posts {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    grid-gap: 30px;
+    grid-gap: 1rem;
   }
 }
 </style>

@@ -36,12 +36,11 @@ export default {
 
 <style lang="scss" scoped>
 picture {
-  margin: 0px;
-
   img {
     object-fit: cover;
     width: 100%;
     max-height: 100%;
+    max-width: 100%;
   }
 }
 </style>

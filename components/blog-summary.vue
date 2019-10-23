@@ -36,7 +36,7 @@ article {
   grid-template-rows: 1fr 1fr 1fr;
   background-color: $lightest-color;
   padding: 10px;
-  border-radius: 2%;
+  border-radius: 1rem;
   border: 1px solid $dark-color;
 
   .thumbnail {

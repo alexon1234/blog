@@ -2,17 +2,18 @@
   <article>
     <ImageResponsive class="thumbnail" :name="post.attributes.name" />
     <section>
-      <h3>
-        <nuxt-link
-          :to="
-            localePath({
-              name: 'posts-slug',
-              params: { slug: post.attributes.name }
-            })
-          "
-          >{{ post.attributes.title }}</nuxt-link
-        >
-      </h3>
+      <nuxt-link
+        tag="a"
+        :to="
+          localePath({
+            name: 'posts-slug',
+            params: { slug: post.attributes.name }
+          })
+        "
+      >
+        {{ post.attributes.title }}
+      </nuxt-link>
+
       <pre>{{ post.attributes.description }}</pre>
     </section>
   </article>
@@ -45,13 +46,9 @@ article {
 
   section {
     grid-row: span 1;
-
-    a {
-      color: $primary-color;
-    }
-    pre {
-      color: $primary-color;
-    }
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
   }
 }
 </style>

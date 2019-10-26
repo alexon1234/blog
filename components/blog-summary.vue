@@ -10,9 +10,7 @@
             params: { slug: post.attributes.name }
           })
         "
-      >
-        {{ post.attributes.title }}
-      </nuxt-link>
+      >{{ post.attributes.title }}</nuxt-link>
 
       <pre>{{ post.attributes.description }}</pre>
     </section>
@@ -38,7 +36,7 @@ article {
   background-color: $lightest-color;
   padding: 10px;
   border-radius: 1rem;
-  border: 1px solid $dark-color;
+  border: 1px solid $gray4;
 
   .thumbnail {
     grid-row: span 2;

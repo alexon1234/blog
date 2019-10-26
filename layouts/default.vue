@@ -23,7 +23,6 @@ footer {
   grid-area: footer;
 }
 .container {
-  height: 100vh;
   display: grid;
   grid-template-areas:
     'header header header header'

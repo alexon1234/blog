@@ -7,12 +7,7 @@
       <LangSwitcher />
     </section>
     <section class="main_posts">
-      <BlogSummary
-        class="post"
-        v-for="post in posts"
-        :key="post.attributes.title"
-        :post="post"
-      />
+      <BlogSummary class="post" v-for="post in posts" :key="post.attributes.title" :post="post" />
     </section>
   </div>
 </template>
@@ -54,7 +49,7 @@ export default {
     justify-content: space-between;
 
     h1 {
-      color: $primary-color;
+      color: $black;
     }
   }
 
@@ -62,7 +57,7 @@ export default {
     display: grid;
     grid-template-columns: repeat(
       auto-fill,
-      minmax(calc(20% + 17.5rem), 1fr)
+      minmax(calc(20% + 10rem), 1fr)
     ); //Hack to make it work responsive
     grid-gap: 1rem;
   }

@@ -9,15 +9,17 @@ body {
   margin: 0rem;
   padding: 0;
   font-family: $font-family;
-  background-color: $light-color;
+  background-color: $gray0;
 
-  select {
+  select,
+  select > * {
+    color: $black;
     font-family: $font-family;
   }
 
   h2,
   a,
   pre {
-    color: $primary-color;
+    color: $black;
   }
 }

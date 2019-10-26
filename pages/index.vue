@@ -1,11 +1,5 @@
 <template>
   <div class="main">
-    <section class="main_header">
-      <h1>
-        <b>{{ $t('posts') }}</b>
-      </h1>
-      <LangSwitcher />
-    </section>
     <section class="main_posts">
       <BlogSummary class="post" v-for="post in posts" :key="post.attributes.title" :post="post" />
     </section>
@@ -15,11 +9,9 @@
 import blogsEn from '~/contents/en/postsEn'
 import blogsEs from '~/contents/es/postsEs'
 import BlogSummary from '~/components/blog-summary'
-import LangSwitcher from '~/components/lang-switcher'
 export default {
   components: {
-    BlogSummary,
-    LangSwitcher
+    BlogSummary
   },
   async asyncData({ app }) {
     const blogs = app.i18n.locale === 'en' ? blogsEn : blogsEs
@@ -50,6 +42,7 @@ export default {
 
     h1 {
       color: $black;
+      text-transform: uppercase;
     }
   }
 

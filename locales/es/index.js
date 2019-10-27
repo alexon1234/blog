@@ -1,3 +1,4 @@
 export default {
-  posts: 'Mis posts'
+  posts: 'Mis posts',
+  back_home: 'Volver'
 }

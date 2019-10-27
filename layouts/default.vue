@@ -19,12 +19,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/css/colors.scss';
+
 header {
   grid-area: header;
   display: grid;
   grid-template-areas: '. header header .';
-  border: 1px solid red;
-  background-color: red;
 
   & .header {
     grid-area: header;

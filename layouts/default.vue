@@ -1,7 +1,7 @@
 <template>
   <section class="container">
     <header>
-      <Header />
+      <Header class="header" />
     </header>
     <nuxt class="main" />
     <footer></footer>
@@ -21,6 +21,14 @@ export default {
 <style lang="scss" scoped>
 header {
   grid-area: header;
+  display: grid;
+  grid-template-areas: '. header header .';
+  border: 1px solid red;
+  background-color: red;
+
+  & .header {
+    grid-area: header;
+  }
 }
 
 .main {
@@ -34,7 +42,7 @@ footer {
   display: grid;
   grid-template-rows: auto auto auto;
   grid-template-areas:
-    '. header header .'
+    'header header header header'
     '. main main .'
     'footer footer footer footer';
 }

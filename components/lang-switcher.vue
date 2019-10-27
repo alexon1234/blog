@@ -9,6 +9,12 @@
 
 <script>
 export default {
+  name: 'LangSwitcher',
+  data() {
+    return {
+      selected: ''
+    }
+  },
   computed: {
     availableLocales() {
       return this.$i18n.locales.filter(i => i.code !== this.$i18n.locale)
@@ -16,7 +22,7 @@ export default {
   },
   methods: {
     changeLocale(code) {
-      this.$router.push(this.switchLocalePath(code))
+      this.$router.push(this.switchLocalePath(this.selected))
     }
   }
 }

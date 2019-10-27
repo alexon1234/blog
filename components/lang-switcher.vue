@@ -10,7 +10,7 @@
         v-for="locale in availableLocales"
         :key="locale.code"
         :label="locale.code"
-        @click="changeLocale(locale.code)"
+        :to="switchLocalePath(locale.code)"
       >{{ locale.name }}</option>
     </select>
   </div>

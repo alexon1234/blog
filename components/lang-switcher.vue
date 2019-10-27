@@ -1,17 +1,8 @@
 <template>
   <div class="lang-switcher">
-    <select aria-label="Language Switcher">
-      <option
-        v-for="locale in selectedLocale"
-        :key="locale.code"
-        :label="locale.name"
-      >{{ locale.name }}</option>
-      <option
-        v-for="locale in availableLocales"
-        :key="locale.code"
-        :label="locale.code"
-        :to="switchLocalePath(locale.code)"
-      >{{ locale.name }}</option>
+    <select v-model="selected" @change="changeLocale()" class="lang-switcher">
+      <option :value="selected" selected>{{ $i18n.locale }}</option>
+      <option v-for="locale in availableLocales" :key="locale.code">{{ locale.code }}</option>
     </select>
   </div>
 </template>
@@ -21,9 +12,6 @@ export default {
   computed: {
     availableLocales() {
       return this.$i18n.locales.filter(i => i.code !== this.$i18n.locale)
-    },
-    selectedLocale() {
-      return this.$i18n.locales.filter(i => i.code === this.$i18n.locale)
     }
   },
   methods: {

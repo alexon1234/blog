@@ -24,7 +24,7 @@
     "frontmatter-markdown-loader": "^3.1.0",
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-pngquant": "^8.0.0",
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.13.1",
     "nuxt-purgecss": "^0.2.1",
     "prettier": "^1.19.1",
     "responsive-loader": "^1.2.0",

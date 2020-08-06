@@ -14,7 +14,7 @@
   "dependencies": {
     "@nuxtjs/style-resources": "^1.0.0",
     "lazysizes": "^5.2.2",
-    "nuxt": "^2.14.0",
+    "nuxt": "^2.14.1",
     "nuxt-i18n": "^6.13.7"
   },
   "devDependencies": {

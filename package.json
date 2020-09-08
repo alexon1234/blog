@@ -27,7 +27,7 @@
     "node-sass": "^4.14.1",
     "nuxt-purgecss": "^1.0.0",
     "prettier": "^2.1.1",
-    "responsive-loader": "^2.0.2",
+    "responsive-loader": "^2.1.1",
     "sass-loader": "^10.0.2",
     "sharp": "^0.26.0",
     "webp-loader": "^0.6.0"

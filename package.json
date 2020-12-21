@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "@bazzite/nuxt-optimized-images": "^0.4.0",
-    "eslint-config-prettier": "^7.0.0",
+    "eslint-config-prettier": "^7.1.0",
     "eslint-plugin-prettier": "^3.3.0",
     "frontmatter-markdown-loader": "^3.6.2",
     "imagemin-mozjpeg": "^9.0.0",
